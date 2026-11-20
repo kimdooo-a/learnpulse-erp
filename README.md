@@ -8,7 +8,7 @@ Once a week LearnPulse reads a school ERP's own records (attendance, assignments
 
 > **All data in this repository is synthetic.** The generator creates a school of 1,200 fictional students. No real student, school or person is represented, and the numbers in `reports/` describe the synthetic dataset, not a real-school result.
 
-Demo video: `DEMO_VIDEO_URL`
+Demo video: https://youtu.be/1SfIbdbMp38
 
 ## Quick start
 
