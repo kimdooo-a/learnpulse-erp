@@ -107,7 +107,7 @@ function spark(values, opts = {}) {
   const pts = values.map((v, i) => [i, v]).filter((p) => p[1] !== null);
   if (!pts.length) return "";
   const x = (i) => pad + (i / Math.max(values.length - 1, 1)) * (W - 2 * pad);
-  const lo = opts.min ?? 0.5, hi = opts.max ?? 1;
+  const lo = opts.min ?? 0.3, hi = opts.max ?? 1;
   const y = (v) => H - pad - ((Math.min(Math.max(v, lo), hi) - lo) / (hi - lo)) * (H - 2 * pad);
   const path = pts.map((p, k) => `${k ? "L" : "M"}${x(p[0]).toFixed(1)},${y(p[1]).toFixed(1)}`).join("");
   const lines = (opts.lines || []).map((l) => `<line x1="${pad}" x2="${W - pad}" y1="${y(l.v)}" y2="${y(l.v)}" stroke="${l.c}" stroke-dasharray="4 4" stroke-width="1"/>`).join("");

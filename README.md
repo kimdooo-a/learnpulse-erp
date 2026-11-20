@@ -1,5 +1,7 @@
 # LearnPulse
 
+[![tests](https://github.com/kimdooo-a/learnpulse-erp/actions/workflows/tests.yml/badge.svg)](https://github.com/kimdooo-a/learnpulse-erp/actions/workflows/tests.yml)
+
 **An early-warning and intervention copilot for school ERPs — working prototype.**
 
 Once a week LearnPulse reads a school ERP's own records (attendance, assignments, assessments, LMS activity) and gives each class teacher a list of at most five students: *who needs attention, why (2–3 concrete facts), and what to do first*. The teacher accepts, edits or dismisses each suggestion; every decision is logged and the flagged indicators are followed for four weeks.
