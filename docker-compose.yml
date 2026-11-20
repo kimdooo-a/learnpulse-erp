@@ -1,0 +1,11 @@
+services:
+  learnpulse:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - learnpulse-data:/app/data
+      - learnpulse-reports:/app/reports
+volumes:
+  learnpulse-data:
+  learnpulse-reports:

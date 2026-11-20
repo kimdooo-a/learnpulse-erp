@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LearnPulse - Teacher Panel</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <div class="logo" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M2 17h7l3-8 5 15 4-11 2 4h7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    <div>
+      <div class="name">LearnPulse</div>
+      <div class="sub">Early-warning and intervention copilot</div>
+    </div>
+  </div>
+  <div class="controls">
+    <label>Signed in as
+      <select id="role">
+        <option value="teacher">Class teacher</option>
+        <option value="head">Academic head</option>
+        <option value="counsellor">Counsellor</option>
+      </select>
+    </label>
+    <label>Class <select id="klass"></select></label>
+    <label>Week <select id="week"></select></label>
+    <span class="badge-synth" title="All students, records and results are generated">Synthetic school data</span>
+  </div>
+</header>
+
+<nav class="tabs" id="tabs">
+  <button data-tab="list" class="active">This week</button>
+  <button data-tab="outcomes">Outcomes</button>
+  <button data-tab="alerts" data-head>Section alerts</button>
+  <button data-tab="evaluation">Evaluation</button>
+</nav>
+
+<main>
+  <section id="view-list" class="view">
+    <div class="summary" id="summary"></div>
+    <div class="split">
+      <div class="list" id="list"></div>
+      <div class="detail" id="detail"><div class="empty">Select a student to see the reasons.</div></div>
+    </div>
+  </section>
+  <section id="view-outcomes" class="view hidden"></section>
+  <section id="view-alerts" class="view hidden"></section>
+  <section id="view-evaluation" class="view hidden"></section>
+</main>
+
+<div id="toast" class="toast hidden"></div>
+<script src="/static/app.js"></script>
+</body>
+</html>

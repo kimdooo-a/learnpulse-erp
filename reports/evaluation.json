@@ -1,0 +1,135 @@
+{
+  "dataset": {
+    "synthetic": true,
+    "seed": 2026,
+    "students": 1200,
+    "classes": 30,
+    "weeks": 40,
+    "subjects": 6,
+    "rows": {
+      "students": 1200,
+      "attendance": 240000,
+      "assignments": 576000,
+      "assessments": 43200,
+      "timetable": 186,
+      "lms": 240000,
+      "fees": 4800
+    },
+    "erp_rows_total": 1105386,
+    "trajectory_students": 180,
+    "trajectory_counts": {
+      "disengagement": 45,
+      "subject": 45,
+      "weekday": 45,
+      "acute": 45
+    },
+    "injected_section_slips": [
+      "7-A Maths (teacher change week 18)",
+      "8-E Science (teacher change week 24)"
+    ],
+    "injected_late_marking": [
+      "7-F week 26",
+      "6-E week 34",
+      "6-B week 35"
+    ]
+  },
+  "signals_fired_total": {
+    "A1": 3197,
+    "A2": 3364,
+    "A3": 3576,
+    "A4": 374,
+    "H1": 4145,
+    "H2": 125,
+    "G1": 1435,
+    "G2": 2292,
+    "E1": 1320,
+    "T1": 70,
+    "F1": 6149
+  },
+  "section_alerts_s1": [
+    "10-B Science (week 25)",
+    "6-F Science (week 13)",
+    "7-A Maths (week 18)",
+    "8-E Science (week 25)",
+    "9-B Hindi (week 30)"
+  ],
+  "data_quality_gate": [
+    "6-B week 35",
+    "6-E week 34",
+    "7-F week 26"
+  ],
+  "model": {
+    "backend": "lightgbm",
+    "features": 41,
+    "fit_rows": 16800,
+    "fit_positive_rate": 0.0667,
+    "calibration_rows": 4800,
+    "fit_weeks": [
+      5,
+      18
+    ],
+    "calibration_weeks": [
+      19,
+      22
+    ],
+    "test_weeks": [
+      29,
+      34
+    ]
+  },
+  "metrics": {
+    "test_rows": 7200,
+    "test_positive_rate": 0.1013,
+    "pr_auc_model": 0.5649,
+    "roc_auc_model": 0.8609,
+    "pr_auc_rules_only": 0.4175,
+    "roc_auc_rules_only": 0.8062,
+    "pr_auc_attendance_below_75": 0.2064,
+    "roc_auc_attendance_below_75": 0.6105,
+    "list_priority_listed": 895,
+    "list_priority_precision_trajectory": 0.5743,
+    "list_priority_precision_label": 0.486,
+    "list_rules_only_listed": 895,
+    "list_rules_only_precision_trajectory": 0.6358,
+    "list_rules_only_precision_label": 0.4034,
+    "recall_trajectories_measurable": 180,
+    "recall_listed_within_4w": 0.7056,
+    "recall_signal_within_4w": 0.9444,
+    "recall_by_trajectory": {
+      "disengagement": {
+        "n": 45,
+        "listed_within_4w": 0.8222
+      },
+      "weekday": {
+        "n": 45,
+        "listed_within_4w": 0.6889
+      },
+      "subject": {
+        "n": 45,
+        "listed_within_4w": 0.3111
+      },
+      "acute": {
+        "n": 45,
+        "listed_within_4w": 1.0
+      }
+    },
+    "lead_time_weeks_median": 8.0,
+    "lead_time_students": 151,
+    "section_alerts": 5
+  },
+  "text_fidelity": {
+    "reason_texts_checked": 26047,
+    "numbers_verified": 26047,
+    "share": 1.0
+  },
+  "timings_seconds": {
+    "generate_s": 0.733,
+    "load_erp_tables_s": 1.151,
+    "connector_and_arrays_s": 2.137,
+    "features_and_12_signals_40_weeks_s": 0.252,
+    "train_model_s": 0.209,
+    "score_40_weeks_s": 2.159,
+    "one_week_score_and_rank_s": 0.054,
+    "persist_results_s": 1.229
+  }
+}
